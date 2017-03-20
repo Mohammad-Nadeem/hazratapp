@@ -1,0 +1,47 @@
+Mufti Khusrheed Anwar Naqshbandi(db)
+Khalifa Majaz Shaykh Zulfiqar Ahmad (db)
+
+
+<div>
+  <%= form_for :user , url:  users_create_path do |f|%>
+    <%= f.label :name%>
+    <%= f.text_field :name%><br>
+    <%= f.radio_button :is_female, 'male', :checked=> true%> 
+    <%= label :is_female_no, 'Male' %>
+    <%= f.radio_button :is_female, 'female' %>
+    <%= label :is_female_yes, 'Female' %>
+
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city, autofocus: true %>
+  </div>  
+   <div class="field"> <div class="field"> 
+  
+    <%= f.label :state %><br />
+    <%= f.text_field :state, autofocus: true %>
+  </div>
+   
+    <div class="field">
+    <%= f.label :country%><br />
+    <%= f.select :country, collection: CountryStateSelect.countries_collection %>   
+  </div> 
+
+
+ 
+   
+  <div class="field">
+    <%= f.label :email%>
+    <%= f.text_field :email%><br>
+    </div>
+    <div class="field">
+    <%= f.label :subject%>
+    <%= f.text_field :subject%><br>
+    </div>
+    <div class="field">
+    <%= f.label :message%>
+    <%= f.text_area :message %><br>
+    </div>
+    <%= f.submit'Submit'%>
+  <%end%>
+
+</div>
