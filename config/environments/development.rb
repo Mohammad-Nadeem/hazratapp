@@ -37,21 +37,21 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
-#   config.action_mailer.delivery_method = :mailgun
-#   config.action_mailer.mailgun_settings = {        
-#     api_key: 'key-4362c7f217a3855846bac291c8e74d91',
-#     domain: 'sandbox11b9e9ceb0a946ae90479182f7b413f2.mailgun.org'
-# }
-
-config.action_mailer.delivery_method = :smtp
-# SMTP settings for gmail
-config.action_mailer.smtp_settings = {
- :address              => "smtp.gmail.com",
- :port                 => 587,
- :user_name            => ENV['gmail_username'],
- :password             => ENV['gmail_password'],
- :authentication       => "plain",
-:enable_starttls_auto => true
+  config.action_view.raise_on_missing_translations = true
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {        
+    api_key: 'key-4362c7f217a3855846bac291c8e74d91',
+    domain: 'sandbox11b9e9ceb0a946ae90479182f7b413f2.mailgun.org'
 }
+
+# config.action_mailer.delivery_method = :smtp
+# # SMTP settings for gmail
+# config.action_mailer.smtp_settings = {
+#  :address              => "smtp.gmail.com",
+#  :port                 => 587,
+#  :user_name            => ENV['gmail_username'],
+#  :password             => ENV['gmail_password'],
+#  :authentication       => "plain",
+# :enable_starttls_auto => true
+# }
 end

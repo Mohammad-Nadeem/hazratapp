@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 root :to => 'users#homepage'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
  # resources :users
- get 'users/tasawwuf'
- get 'users/about'
- get 'users/bayanaat'
- get 'users/contact'
+ get 'users/tasawwuf', as: 'tasawwuf',:path => "tasawwuf"
+ get 'users/about', as:'about', path: 'about'
+ get 'users/bayanaat',as: 'bayanaat', path: 'bayanaat'
+ get 'users/contact', as:'contact', path: 'contact'
  post 'users/create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
